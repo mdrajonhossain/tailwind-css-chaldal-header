@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Navbar with Search | Tailwind CSS</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+
+  <!-- Navbar -->
+  <div class="bg-yellow-300 px-4 py-3 flex items-center justify-between">
+    <!-- Left Section -->
+    <div class="flex items-center space-x-4">
+      <!-- Menu Icon -->
+      <button class="p-2 focus:outline-none">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+        </svg>
+      </button>
+
+      <!-- Logo -->
+      <img src="https://via.placeholder.com/40" alt="Logo" class="h-10 w-10">
+
+      <!-- Search Bar -->
+      <div class="hidden md:flex flex-grow" style="width: 100%">
+        <input type="text" 
+               placeholder="Search for products (e.g. eggs, milk, potato)" 
+               class="w-full p-2 rounded-md border border-gray-300 focus:outline-none focus:ring focus:ring-yellow-500">
+      </div>
+    </div>
+
+    <!-- Right Section -->
+    <div class="flex items-center space-x-4">
+      <!-- Location -->
+      <div class="text-red-600 text-sm hidden md:block">
+        <span>Baridhara, Dhaka</span>
+      </div>
+
+      <!-- Language Switch -->
+      <div class="flex items-center space-x-2">
+        <button class="text-sm">EN</button>
+        <button class="text-sm">বা</button>
+      </div>
+
+      <!-- Login Button -->
+      <button class="bg-red-400 text-white px-4 py-2 rounded-md hover:bg-red-500">
+        Login
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Search Bar -->
+  <div class="md:hidden px-4 py-2">
+    <input type="text" 
+           placeholder="Search for products (e.g. eggs, milk, potato)" 
+           class="w-full p-2 rounded-md border border-gray-300 focus:outline-none focus:ring focus:ring-yellow-500">
+  </div>
+
+</body>
+</html>
